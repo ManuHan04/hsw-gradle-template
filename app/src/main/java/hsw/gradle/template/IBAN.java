@@ -1,4 +1,5 @@
 package hsw.gradle.template;
+
 import java.math.BigInteger;
 
 public class IBAN {
@@ -15,7 +16,7 @@ public class IBAN {
 
         IBANnumber = this.IBANnumber;
 
-        if(IBANnumber.length() != 22) {
+        if (IBANnumber.length() != 22) {
             return false;
         }
         //System.out.println(IBANnumber);
@@ -63,7 +64,7 @@ public class IBAN {
         IBANnumberBigInt = IBANnumberBigInt.mod(modulo);
         //System.out.println(IBANnumberBigInt);
 
-        if(IBANnumberBigInt.intValue() == 1) {
+        if (IBANnumberBigInt.intValue() == 1) {
             return true;
         } else {
             return false;
