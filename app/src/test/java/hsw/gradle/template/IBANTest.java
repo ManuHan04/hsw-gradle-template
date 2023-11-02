@@ -9,14 +9,14 @@ public class IBANTest {
     void IBANDE() {
         String myIBAN = "DE68210501700012345678";
         IBAN classUnderTest = new IBAN(myIBAN);
-        assertEquals(classUnderTest.check(myIBAN), true);
+        assertTrue(classUnderTest.check(myIBAN));
     }
 
     @Test
     void IBANWrong() {
         String myIBAN = "ZZ68210501700012345678";
         IBAN classUnderTest = new IBAN(myIBAN);
-        assertEquals(classUnderTest.check(myIBAN), false);
+        assertFalse(classUnderTest.check(myIBAN));
     }
 
     @Test
