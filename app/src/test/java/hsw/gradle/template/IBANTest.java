@@ -18,4 +18,18 @@ public class IBANTest {
         IBAN classUnderTest = new IBAN(myIBAN);
         assertEquals(classUnderTest.check(myIBAN), false);
     }
+
+    @Test
+    void IBANGermanTest() {
+        String myIBAN = "DE68210501700012345678";
+        IBAN classUnderTest = new IBAN(myIBAN);
+        assertTrue(classUnderTest.check(myIBAN));
+    }
+
+    @Test
+    void IBANGermanTestWrong() {
+        String myIBAN = "ZZ68210501700012345678";
+        IBAN classUnderTest = new IBAN(myIBAN);
+        assertFalse(classUnderTest.check(myIBAN));
+    }
 }
