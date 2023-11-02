@@ -9,7 +9,7 @@ public class IBAN {
         this.IBANnumber = IBANnumber;
     }
 
-    public boolean checkGerman(String IBANnumber) {
+    public boolean isGermanIBAN(String IBANnumber) {
         return false;
     }
 

@@ -23,13 +23,13 @@ public class IBANTest {
     void IBANGermanTest() {
         String myIBAN = "DE68210501700012345678";
         IBAN classUnderTest = new IBAN(myIBAN);
-        assertTrue(classUnderTest.check(myIBAN));
+        assertTrue(classUnderTest.isGermanIBAN(myIBAN));
     }
 
     @Test
     void IBANGermanTestWrong() {
         String myIBAN = "ZZ68210501700012345678";
         IBAN classUnderTest = new IBAN(myIBAN);
-        assertFalse(classUnderTest.check(myIBAN));
+        assertFalse(classUnderTest.isGermanIBAN(myIBAN));
     }
 }
