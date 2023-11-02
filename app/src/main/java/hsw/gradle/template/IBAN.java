@@ -10,7 +10,7 @@ public class IBAN {
     }
 
     public boolean isGermanIBAN(String IBANnumber) {
-        return false;
+        return IBANnumber.startsWith("DE");
     }
 
     public boolean check(String IBANnumber) {
